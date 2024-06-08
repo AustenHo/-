@@ -1,0 +1,45 @@
+// (1) 寫一個函式用來生成一個指定長度的隨機字串
+function generateRandomString(length) {
+    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    let result = '';
+    for (let i = 0; i < length; i++) {
+        result += characters.charAt(Math.floor(Math.random() * characters.length));
+    }
+    return result;
+}
+let stringLength = prompt("請輸入隨機字串的長度:");
+let randomString = generateRandomString(parseInt(stringLength));
+displayResult(1, `生成的隨機字串: ${randomString}`);
+
+// (2) 寫一個函式用來判斷一個數字是否為完美數
+function isPerfectNumber(num) {
+    let sum = 0;
+    for (let i = 1; i < num; i++) {
+        if (num % i === 0) {
+            sum += i;
+        }
+    }
+    return sum === num;
+}
+let perfectNumber = prompt("請輸入一個數字來判斷是否為完美數:");
+let perfectNumberResult = isPerfectNumber(parseInt(perfectNumber));
+displayResult(2, `${perfectNumber} 是完美數: ${perfectNumberResult}`);
+
+// (3) 寫一個函式用來進行氣泡排序法
+function bubbleSort(arr) {
+    let len = arr.length;
+    for (let i = 0; i < len; i++) {
+        for (let j = 0; j < len - 1 - i; j++) {
+            if (arr[j] > arr[j + 1]) {
+                let temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
+            }
+        }
+    }
+    return arr;
+}
+let arrayInput = prompt("請輸入一個用逗號分隔的數字陣列進行排序:");
+let array = arrayInput.split(',').map(Number);
+let sortedArray = bubbleSort(array);
+displayResult(3, `排序後的陣列: ${sortedArray.join(', ')}`);
