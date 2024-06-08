@@ -1,0 +1,59 @@
+// (1) 計算2的10次方
+let power = 2 ** 10;
+displayResult(1, power);
+
+// (2) 計算 100 除以7的商和餘數
+let quotient = Math.floor(100 / 7);
+let remainder = 100 % 7;
+displayResult(2, `商: ${quotient}, 餘數: ${remainder}`);
+
+// (3) 計算10除以3的結果，保留2位小數
+let result = (10 / 3).toFixed(2);
+displayResult(3, result);
+
+// (4) 將字串“5”轉換成數值型別，然後加上10
+let number = Number("5");
+let sum = number + 10;
+displayResult(4, sum);
+
+// (5) 計算圓形的面積，半徑為7
+let radius = 7;
+let area = Math.PI * radius ** 2;
+displayResult(5, area);
+
+// (6) 將字串『hello"與字串"world"連接起來
+let str1 = "hello";
+let str2 = "world";
+let concatenatedString = str1 + str2;
+displayResult(6, concatenatedString);
+
+// (7) 計算數字 123的個位數字
+let number123 = 123;
+let unitDigit = number123 % 10;
+displayResult(7, unitDigit);
+
+// (8) 將數字4 轉換成字串型別，然後連接上字串"2"
+let num = 4;
+let str = num.toString() + "2";
+displayResult(8, str);
+
+// (9) 判斷數字15是否在10到20的範圍內，若是，就輸出 true，否則輸出 false
+let num15 = 15;
+let isInRange = num15 >= 10 && num15 <= 20;
+displayResult(9, isInRange);
+
+// (10) 判斷字串"hello" 是否既不是空字串也不是 undefined，若是，就輸出 true，否則輸出false
+let strHello = "hello";
+let isValidString = strHello !== "" && strHello !== undefined;
+displayResult(10, isValidString);
+
+// (11) 判斷數字25 是否為偶數，若是，就輸出"Even"，否則輸出"Odd"
+let num25 = 25;
+let isEven = num25 % 2 === 0;
+displayResult(11, isEven ? "Even" : "Odd");
+
+// (12) 比較數字x和數字y的大小，若x大於y，就輸出x，否則輸出y
+let x = 10;
+let y = 20;
+let largerNumber = x > y ? x : y;
+displayResult(12, largerNumber);
